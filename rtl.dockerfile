@@ -1,4 +1,4 @@
-FROM shahanafarooqui/rtl:0.13.2@sha256:07d4c1f263c05c32270dcaab3625fc68ef985efce652e7850fbf57f65d36366f
+FROM shahanafarooqui/rtl:0.14.0
 
 # create default config. RTL wants to create it by itself but fails because we are running inside a docker container
 # with a user without a home directory. So creating one ourselves fixes that issue
