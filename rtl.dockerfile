@@ -7,4 +7,5 @@ ENV PORT=3000 \
     LN_SERVER_URL=http://core-lightning:3003/v1 \
     MACAROON_PATH=/root/.lightning/certs \
     RTL_CONFIG_PATH=/root/.lightning/rtl \
-    RTL_COOKIE_PATH=/root/.lightning/rtl/.cookie
+    RTL_COOKIE_PATH=/root/.lightning/rtl/.cookie \
+    LIGHTNINGD_NETWORK=testnet
