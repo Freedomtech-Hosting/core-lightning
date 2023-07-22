@@ -24,9 +24,6 @@ mkdir -p /root/.lightning/certs
 rm -rf /usr/local/libexec/c-lightning/plugins/c-lightning-rest/certs
 ln -s /root/.lightning/certs /usr/local/libexec/c-lightning/plugins/c-lightning-rest/certs
 
-# # preping a folder for rtl
-mkdir -p /root/.lightning/rtl
-
 # starting core lightning
 lightningd --network="${LIGHTNINGD_NETWORK}" --conf="/etc/core-lightning.conf" "$@" &
 

@@ -56,6 +56,7 @@ services:
       dockerfile: rtl.dockerfile
     ports:
       - 3000
+    user: '10000'
     volumes:
       - core-lightning:/root/.lightning
     labels:
