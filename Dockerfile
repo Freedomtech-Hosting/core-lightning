@@ -21,8 +21,11 @@ COPY torrc /etc/torrc
 COPY --from=core-lightning-rest /usr/src/app /usr/local/libexec/c-lightning/plugins/c-lightning-rest
 
 COPY core-lightning.conf /etc/core-lightning.conf
-RUN fix-permissions /etc/core-lightning.conf
+RUN fix-permissions /etc/core-lightning.conf \
+    && fix-permissions /root \
+    && fix-permissions /usr/local/libexec/c-lightning/plugins/c-lightning-rest
 
-ENV LIGHTNINGD_NETWORK=testnet
+ENV LIGHTNINGD_NETWORK=testnet \
+    HOME=/root
 
 COPY start-core-lightning.sh /entrypoint.sh

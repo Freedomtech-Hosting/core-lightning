@@ -10,6 +10,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - core-lightning:/root/.lightning
+    user: '10000'
     ports:
       - 3003
     labels:

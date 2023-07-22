@@ -15,7 +15,7 @@ networkdatadir="${LIGHTNINGD_DATA}/${LIGHTNINGD_NETWORK}"
 set -m
 
 # Setup and Start TOR
-mkdir -p /.root/lightning/tor
+mkdir -p /root/.lightning/tor
 tor -f /etc/torrc &
 
 # Prepping certs folder, used by the core-lightning-rest plugin
@@ -24,8 +24,8 @@ mkdir -p /root/.lightning/certs
 rm -rf /usr/local/libexec/c-lightning/plugins/c-lightning-rest/certs
 ln -s /root/.lightning/certs /usr/local/libexec/c-lightning/plugins/c-lightning-rest/certs
 
-# preping a folder for rtl
-mkdir -p /.root/lightning/rtl
+# # preping a folder for rtl
+# mkdir -p /root/.lightning/rtl
 
 # starting core lightning
 lightningd --network="${LIGHTNINGD_NETWORK}" --conf="/etc/core-lightning.conf" "$@" &

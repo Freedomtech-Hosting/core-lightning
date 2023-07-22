@@ -11,4 +11,4 @@ HashedControlPassword 16:BAC68AFAD2E5895960CDE27649DA416AA913A19BE28C00119A5EBFF
 RunAsDaemon 0
 
 ## The directory for keeping all the keys/etc
-DataDirectory /.root/lightning/tor
+DataDirectory /root/.lightning/tor
