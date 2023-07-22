@@ -58,10 +58,10 @@ services:
       - 3000
     user: '10000'
     volumes:
-      - core-lightning:/root/.lightning
+      - core-lightning:/core-lightning
     labels:
       lagoon.type: basic-persistent
-      lagoon.persistent: /root/.lightning
+      lagoon.persistent: /core-lightning
       lagoon.service.port: 3000
       lagoon.persistent.name: core-lightning
     environment:

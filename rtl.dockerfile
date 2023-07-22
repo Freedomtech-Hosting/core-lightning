@@ -8,6 +8,6 @@ ENV PORT=3000 \
     APP_PASSWORD=freedomtech \
     LN_IMPLEMENTATION=CLN \
     LN_SERVER_URL=http://core-lightning:3003/v1 \
-    MACAROON_PATH=/root/.lightning/certs \
+    MACAROON_PATH=/core-lightning/certs \
     RTL_CONFIG_PATH=/tmp \
     LIGHTNINGD_NETWORK=testnet
